@@ -1,8 +1,241 @@
+.header {
+  color: #FFFFFF;
+  position: relative;
+  .nav {
+    background-color: rgba(14,44,42,0.8);
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    &__logo {
+      float: left;
+      font-family: 'Pacifico', cursive;
+      font-size: 28px;
+      padding: 23px 0 15px;
+      a {
+        color: #FFFFFF;
+      }
+      &::after {
+        content: "| I'am your tag line";
+        font-family: 'Open Sans', sans-serif;
+        color: #5d6466;
+        font-size: 13px;
+        margin-left: 15px;
+      }
+    }
+    .navbar {
+      float: right;
+      margin-bottom: 0;
+      border: none;
+      &__menu {
+        text-decoration: none;
+        &__item {
+          display: inline-block;
+          padding: 28px 15px 20px;
+          position: relative;
+          a {
+            color: #ffffff
+          }
+          &:after {
+            content: "";
+            height: 1px;
+            width: 0px;
+            background-color: #32b0ee;
+            position: absolute;
+            top: 0;
+            left: 20%;
+          }
+          &:hover::after {
+            width: 45px;
+            transition: 1.3s;
+          }
+
+        }
+
+      }
+    }
+    .toggleMenu {
+      display: none;
+    }
+  }
+  .content {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 2.5rem;
+    &__text {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      &--color {
+        color: #0fd992;
+      }
+    }
+    &__title {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    &> p {
+      text-align: center;
+      position: relative;
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        height: 1px;
+        width: 25px;
+        background-color: #0feb9e;
+      }
+      &::before {
+        left: 45px;
+      }
+      &::after {
+        right: 45px;
+      }
+    }
+  }
+  .dot {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateX(-50%);
+    &__icon {
+      margin-bottom: 15px;
+      display: block;
+      width: 15px;
+      height: 15px;
+      background-color: #000000;
+      border-radius: 50%;
+      border: 1px solid #333a3e;
+      transition: 0.8s;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .active {
+      background-color: #FFFFFF;
+    }
+  }
+  .icon {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    &__list {
+      list-style-type: none;
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        color: #566e68;
+        &:nth-child(3) {
+          color: #FFFFFF;
+        }
+      }
+
+    }
+  }
+  .slider {
+    .slide {
+      display: none;
+    }
+  }
+}
 .nav {
   @media #{$info-phone} {
-
+    
   }
-  @media screen and (max-width: 767px){
 
+}
+@media only screen and (max-width: 475px) {
+  .header {
+    .content {
+      &__title {
+        font-size: 1.5rem;
+      }
+      &__text {
+        font-size: 1.2rem;
+      }
+      &> p {
+        &::before {
+          left: -20px;
+        }
+        &::after {
+          right: -20px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 475px) and(max-width: 767px) {
+  .header {
+    .slider {
+      .slide {
+        height: 100%;
+        width: initial;
+      }
+    }
+    .content {
+      &__title {
+        font-size: 2rem;
+      }
+      &__text {
+        font-size: 1.5rem;
+      }
+      & > p {
+        &::before {
+          left: 0;
+        }
+        &::after {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    .nav {
+      .toggleMenu {
+        float: right;
+        display: block;
+        margin: 20px;
+      }
+      .show {
+        display: block;
+      }
+      .navbar {
+        display: none;
+        float: none;
+        clear: both;
+        &__menu {
+          animation-name: fadeIn;
+          animation-duration: 2s;
+          &__item {
+            text-align: center;
+            display: block;
+            padding: 15px;
+            &:hover {
+              opacity: 0.5;
+            }
+            &:hover::after {
+              width: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+    height: 70px;
+  }
+  to {
+    opacity: 1;
+    height: 235px;
   }
 }

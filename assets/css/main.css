@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@media only screen and (max-width: 1280px) {
+  .header .slider .slide {
+    width: initial;
+    height: 100%;
+  }
+}
 /* -------------------------------------------------------------
   Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
   By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
@@ -7269,8 +7275,218 @@ img {
   max-width: 100%;
 }
 
-h1 {
-  color: red;
+.header {
+  color: #FFFFFF;
+  position: relative;
+}
+.header .nav {
+  background-color: rgba(14, 44, 42, 0.8);
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.header .nav__logo {
+  float: left;
+  font-family: "Pacifico", cursive;
+  font-size: 28px;
+  padding: 23px 0 15px;
+}
+.header .nav__logo a {
+  color: #FFFFFF;
+}
+.header .nav__logo::after {
+  content: "| I'am your tag line";
+  font-family: "Open Sans", sans-serif;
+  color: #5d6466;
+  font-size: 13px;
+  margin-left: 15px;
+}
+.header .nav .navbar {
+  float: right;
+  margin-bottom: 0;
+  border: none;
+}
+.header .nav .navbar__menu {
+  text-decoration: none;
+}
+.header .nav .navbar__menu__item {
+  display: inline-block;
+  padding: 28px 15px 20px;
+  position: relative;
+}
+.header .nav .navbar__menu__item a {
+  color: #ffffff;
+}
+.header .nav .navbar__menu__item:after {
+  content: "";
+  height: 1px;
+  width: 0px;
+  background-color: #32b0ee;
+  position: absolute;
+  top: 0;
+  left: 20%;
+}
+.header .nav .navbar__menu__item:hover::after {
+  width: 45px;
+  transition: 1.3s;
+}
+.header .nav .toggleMenu {
+  display: none;
+}
+.header .content {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 2.5rem;
+}
+.header .content__text {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.header .content__text--color {
+  color: #0fd992;
+}
+.header .content__title {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.header .content > p {
+  text-align: center;
+  position: relative;
+}
+.header .content > p::before, .header .content > p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  height: 1px;
+  width: 25px;
+  background-color: #0feb9e;
+}
+.header .content > p::before {
+  left: 45px;
+}
+.header .content > p::after {
+  right: 45px;
+}
+.header .dot {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateX(-50%);
+}
+.header .dot__icon {
+  margin-bottom: 15px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #000000;
+  border-radius: 50%;
+  border: 1px solid #333a3e;
+  transition: 0.8s;
+}
+.header .dot__icon:hover {
+  cursor: pointer;
+}
+.header .dot .active {
+  background-color: #FFFFFF;
+}
+.header .icon {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .icon__list {
+  list-style-type: none;
+}
+.header .icon__list li {
+  display: inline-block;
+  margin-right: 10px;
+  color: #566e68;
+}
+.header .icon__list li:nth-child(3) {
+  color: #FFFFFF;
+}
+.header .slider .slide {
+  display: none;
+}
+
+@media only screen and (max-width: 475px) {
+  .header .content__title {
+    font-size: 1.5rem;
+  }
+  .header .content__text {
+    font-size: 1.2rem;
+  }
+  .header .content > p::before {
+    left: -20px;
+  }
+  .header .content > p::after {
+    right: -20px;
+  }
+}
+@media only screen and (min-width: 475px) and (max-width: 767px) {
+  .header .slider .slide {
+    height: 100%;
+    width: initial;
+  }
+  .header .content__title {
+    font-size: 2rem;
+  }
+  .header .content__text {
+    font-size: 1.5rem;
+  }
+  .header .content > p::before {
+    left: 0;
+  }
+  .header .content > p::after {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header .nav .toggleMenu {
+    float: right;
+    display: block;
+    margin: 20px;
+  }
+  .header .nav .show {
+    display: block;
+  }
+  .header .nav .navbar {
+    display: none;
+    float: none;
+    clear: both;
+  }
+  .header .nav .navbar__menu {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+  }
+  .header .nav .navbar__menu__item {
+    text-align: center;
+    display: block;
+    padding: 15px;
+  }
+  .header .nav .navbar__menu__item:hover {
+    opacity: 0.5;
+  }
+  .header .nav .navbar__menu__item:hover::after {
+    width: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+    height: 70px;
+  }
+  to {
+    opacity: 1;
+    height: 235px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
