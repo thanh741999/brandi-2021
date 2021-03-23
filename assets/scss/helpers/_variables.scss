@@ -47,8 +47,20 @@ $hsize: $size/2;
 //$info-phone: "only screen and (max-width : 640px)";
 
 $info-tablet-horizontal: "only screen and (max-width : 1160px)";
+@media only screen and (max-width: 1280px) {
+  .header {
+    .slider {
+      .slide {
+        width: initial;
+        height: 100%;
+      }
+    }
+  }
+  
+}
 $info-tablet-vertical: "only screen and (max-width : 900px)";
 $info-phone: "only screen and (max-width : 767px)";
+
 $info-phone-4: "only screen and (max-width : 320px)";
 
 $primary-green: #0eb493;

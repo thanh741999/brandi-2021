@@ -17,10 +17,51 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div class="header">
+    <div class="nav">
+        <div class="container">
+                <h1 class="nav__logo"><a href="#">Brandi</a></h1>
+                <button class="toggleMenu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+                <div class="navbar">
+                    <ul class="navbar__menu">
+                        <li class="navbar__menu__item"><a href="">Home</a></li>
+                        <li class="navbar__menu__item"><a href="">Feature</a></li>
+                        <li class="navbar__menu__item"><a href="">works</a></li>
+                        <li class="navbar__menu__item"><a href="">Team</a></li>
+                        <li class="navbar__menu__item"><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <div class="content">
+        <h2 class="content__title">Meet <b>Brandi.</b></h2>
+        <h3 class="content__text"><span class="content__text--color">/creative</span> one page template.</h3>
+        <p> we are a team of professionals </p>
+    </div>
+    <div class="slider">
+            <img src="./assets/img/headerimg.png" alt="slide" class="slide">
+            <img src="./assets/img/headerimg2.png" alt="slide" class="slide">
+            <img src="./assets/img/headerimg3.png" alt="slide" class="slide">
+    </div>
+    <div class="dot">
+        <span class="dot__icon" onclick="showSlide(0)"></span>
+        <span class="dot__icon" onclick="showSlide(1)"></span>
+        <span class="dot__icon" onclick="showSlide(2)"></span>
+    </div>
+    <div class="icon">
+        <ul class="icon__list">
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-facebook-f"></i></li>
+            <li><i class="fab fa-google-plus-g"></i></li>
+            <li><i class="fas fa-basketball-ball"></i></li>
+        </ul>
+    </div>
+</div>
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -30,7 +71,9 @@
 <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
 <script src="assets/js/vendor/bootstrap.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
 
+</script>
 </body>
 </html>
 
