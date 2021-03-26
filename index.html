@@ -20,38 +20,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="header">
+<div class="header" id="header">
     <div class="nav">
         <div class="container">
-                <h1 class="nav__logo"><a href="#">Brandi</a></h1>
-                <button class="toggleMenu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+                <h1 class="nav__logo"><a href="#">Brandi</a></h1><span>I'am your tag line</span>
+                <div class="toggleMenu" onclick="toggleMenu()">
+                    <div class="toggleMenu__line"></div>
+                    <div class="toggleMenu__line"></div>
+                    <div class="toggleMenu__line"></div>
+                </div>
                 <div class="navbar">
                     <ul class="navbar__menu">
-                        <li class="navbar__menu__item"><a href="">Home</a></li>
-                        <li class="navbar__menu__item"><a href="">Feature</a></li>
-                        <li class="navbar__menu__item"><a href="">works</a></li>
-                        <li class="navbar__menu__item"><a href="">Team</a></li>
-                        <li class="navbar__menu__item"><a href="">Contact</a></li>
+                        <li class="navbar__menu__item"><a href="#header">Home</a></li>
+                        <li class="navbar__menu__item"><a href="#features" onclick="">Feature</a></li>
+                        <li class="navbar__menu__item"><a href="#works">works</a></li>
+                        <li class="navbar__menu__item"><a href="#team">Team</a></li>
+                        <li class="navbar__menu__item"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     <div class="content">
-        <h2 class="content__title">Meet <b>Brandi.</b></h2>
+        <h2 class="content__title">Meet <b>Brandi!</b></h2>
         <h3 class="content__text"><span class="content__text--color">/creative</span> one page template.</h3>
         <p> we are a team of professionals </p>
     </div>
     <div class="slider">
-            <img src="./assets/img/headerimg.png" alt="slide" class="slide">
-            <img src="./assets/img/headerimg2.png" alt="slide" class="slide">
-            <img src="./assets/img/headerimg3.png" alt="slide" class="slide">
+        <div class="slider__img"></div>
+        <div class="slider__img"></div>
+        <div class="slider__img"></div>
     </div>
     <div class="dot">
-        <span class="dot__icon" onclick="showSlide(0)"></span>
-        <span class="dot__icon" onclick="showSlide(1)"></span>
-        <span class="dot__icon" onclick="showSlide(2)"></span>
+        <span class="dot__icon" onclick="showSlide(0,'slider__img','dot__icon')"></span>
+        <span class="dot__icon" onclick="showSlide(1,'slider__img','dot__icon')"></span>
+        <span class="dot__icon" onclick="showSlide(2,'slider__img','dot__icon')"></span>
     </div>
     <div class="icon">
         <ul class="icon__list">
@@ -62,7 +68,207 @@
         </ul>
     </div>
 </div>
+<section class="features" id="features">
+    <div class="container">
+        <div class="features__header">
+            <h3 class="features__header__title title">features</h3>
+            <div class="features__header__heart heart">
+                <span><img src="./assets/img/heart-empty%20copy.png" alt="heart"></span>
+            </div>
+        </div>
+        <div class="features__content">
+            <div class="features__content__box">
+                <div class="radius">
+                    <img src="./assets/img/feather.png" alt="feather">
+                </div>
+                <div class="box__text">
+                    <h4>Branding</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+            <div class="features__content__box">
+                <div class="radius">
+                    <img src="./assets/img/pencil.png" alt="pencil">
+                </div>
+                <div class="box__text">
+                    <h4>Development</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+            <div class="features__content__box">
+                <div class="radius">
+                    <img src="./assets/img/megaphone.png" alt="megaphone">
+                </div>
+                <div class="box__text">
+                    <h4>Consulting</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+        </div>
+        <div class="features__content">
+            <div class="features__content__box">
+                <div class="radius">
+                    <img src="./assets/img/pencil.png" alt="pencil">
+                </div>
+                <div class="box__text">
+                    <h4>Development</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+            <div class="features__content__box">
+                <div class="radius">
+                    <img src="./assets/img/megaphone.png" alt="megaphone">
+                </div>
+                <div class="box__text">
+                    <h4>Consulting</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+            <div class="features__content__box">
 
+                <div class="radius">
+                    <img src="./assets/img/feather.png" alt="feather">
+                </div>
+                <div class="box__text">
+                    <h4>Branding</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+        </div>
+        <div class="features__content">
+            <div class="features__content__box">
+
+                <div class="radius">
+                    <img src="./assets/img/megaphone.png" alt="megaphone">
+                </div>
+                <div class="box__text">
+                    <h4>Consulting</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+            <div class="features__content__box">
+
+                <div class="radius">
+                    <img src="./assets/img/feather.png" alt="feather">
+                </div>
+                <div class="box__text">
+                    <h4>Branding</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+            <div class="features__content__box">
+                <div class="radius">
+                    <img src="./assets/img/pencil.png" alt="pencil">
+                </div>
+                <div class="box__text">
+                    <h4>Development</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+            </div>
+        </div>
+        <div class="features__dot">
+            <span class="features__dot__icon" onclick="showSlide(0,'features__content','features__dot__icon')"></span>
+            <span class="features__dot__icon" onclick="showSlide(1,'features__content','features__dot__icon')"></span>
+            <span class="features__dot__icon" onclick="showSlide(2,'features__content','features__dot__icon')"></span>
+        </div>
+    </div>
+</section>
+<section class="works" id="works">
+    <div class="container">
+        <div class="works__header">
+                <h3 class="works__header__title title">works</h3>
+                <div class="works__header__heart heart">
+                    <span><img src="./assets/img/heart-empty%20copy.png" alt="heart"></span>
+                </div>
+                <p class="works__header__about">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                </p>
+        </div>
+        <ul class="works__list">
+            <li class="works__list__item active"><a href="">All</a></li>
+            <li class="works__list__item"><a href="">Branding</a></li>
+            <li class="works__list__item"><a href="">Web</a></li>
+            <li class="works__list__item"><a href="">Logo Design</a></li>
+            <li class="works__list__item"><a href="">Photography</a></li>
+        </ul>
+    </div>
+    <div class="works__pictures">
+        <div class="works__pictures__slide">
+            <div class="box">
+                <img src="./assets/img/Rectangle1.png" alt="Rectangle" class="box__img">
+                <div class="box__content">
+                    <img src="./assets/img/icon-Eye.png" alt="eye" class="box__content__eye">
+                    <b class="">Labore et dolore magnam</b>
+                    <p class="">Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./assets/img/Rectangle2.png" alt="Rectangle" class="box__img">
+                <div class="box__content">
+                    <img src="./assets/img/icon-Eye.png" alt="eye" class="box__content__eye">
+                    <b class="">Labore et dolore magnam</b>
+                    <p class="">Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./assets/img/Rectangle3.png" alt="Rectangle" class="box__img">
+                <div class="box__content">
+                    <img src="./assets/img/icon-Eye.png" alt="eye" class="box__content__eye">
+                    <b class="">Labore et dolore magnam</b>
+                    <p class="">Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./assets/img/Rectangle4.png" alt="Rectangle" class="box__img">
+                <div class="box__content">
+                    <img src="./assets/img/icon-Eye.png" alt="eye" class="box__content__eye">
+                    <b class="">Labore et dolore magnam</b>
+                    <p class="">Photography</p>
+                </div>
+            </div>
+        </div>
+        <div class="works__pictures__slide">
+            <div class="box">
+                <img src="./assets/img/Rectangle5.png" alt="Rectangle" class="rectangle__img">
+                <div class="box__content">
+                    <img src="./assets/img/icon-Eye.png" alt="eye" class="box__content__eye">
+                    <b class="">Labore et dolore magnam</b>
+                    <p class="">Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./assets/img/Rectangle6.png" alt="Rectangle" class="rectangle__img">
+                <div class="box__content">
+                    <img src="./assets/img/icon-Eye.png" alt="eye" class="box__content__eye">
+                    <b class="">Labore et dolore magnam</b>
+                    <p class="">Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./assets/img/Rectangle7.png" alt="Rectangle" class="rectangle__img">
+                <div class="box__content">
+                    <img src="./assets/img/icon-Eye.png" alt="eye" class="box__content__eye">
+                    <b class="">Labore et dolore magnam</b>
+                    <p class="">Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./assets/img/Rectangle8.png" alt="Rectangle" class="rectangle__img">
+                <div class="box__content">
+                        <img src="./assets/img/icon-Eye.png" alt="eye" class="box__content__eye">
+                        <b class="">Labore et dolore magnam</b>
+                        <p class="">Photography</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="team">
+    <div class="container team__header">
+        <h3 class="team__header__title"></h3>
+        <div class="team__header__heart"><span><img src="" alt=""></span></div>
+    </div>
+</section>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>

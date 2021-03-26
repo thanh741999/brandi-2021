@@ -1,12 +1,16 @@
+body {
+  font-family: "Open Sans";
+}
 .header {
   color: #FFFFFF;
+  height: 100vh;
   position: relative;
   .nav {
     background-color: rgba(14,44,42,0.8);
     opacity: 0.8;
     position: absolute;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     &__logo {
       float: left;
       font-family: 'Pacifico', cursive;
@@ -16,12 +20,20 @@
         color: #FFFFFF;
       }
       &::after {
-        content: "| I'am your tag line";
-        font-family: 'Open Sans', sans-serif;
-        color: #5d6466;
+        content: "|";
+        color: #154357;
         font-size: 13px;
-        margin-left: 15px;
+        font-family: 'Open Sans', sans-serif;
+        margin-left: 26px;
       }
+    }
+    span {
+      font-family: 'Open Sans', sans-serif;
+      color: #5d6466;
+      font-size: 13px;
+      margin-left: 15px;
+      display: inline-block;
+      padding: 35px 0 0;
     }
     .navbar {
       float: right;
@@ -34,7 +46,8 @@
           padding: 28px 15px 20px;
           position: relative;
           a {
-            color: #ffffff
+            color: #ffffff;
+            transition: 3s linear;
           }
           &:after {
             content: "";
@@ -56,6 +69,14 @@
     }
     .toggleMenu {
       display: none;
+      border: none;
+      background: transparent;
+      &__line {
+        margin-bottom: 5px;
+        width: 25px;
+        height: 1px;
+        background-color: white;
+      }
     }
   }
   .content {
@@ -64,6 +85,7 @@
     left: 50%;
     transform: translate(-50%);
     line-height: 2.5rem;
+    z-index: 2;
     &__text {
       font-size: 2rem;
       margin-bottom: 10px;
@@ -105,8 +127,8 @@
     &__icon {
       margin-bottom: 15px;
       display: block;
-      width: 15px;
-      height: 15px;
+      width: 10px;
+      height: 10px;
       background-color: #000000;
       border-radius: 50%;
       border: 1px solid #333a3e;
@@ -138,10 +160,212 @@
     }
   }
   .slider {
-    .slide {
+    .show-content {
+      display: block;
+    }
+    &__img {
       display: none;
+      animation: fadeInContent 2.2s linear;
+    }
+    &__img:nth-child(1) {
+      background-image: url("../img/headerimg.png");
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+    }
+    &__img:nth-child(2) {
+      background-image: url("../img/headerimg2.png");
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+    }
+    &__img:nth-child(3) {
+      background-image: url("../img/headerimg3.png");
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
     }
   }
+}
+//features
+.features,.works {
+  font-family: "Open Sans";
+  background: linear-gradient(to bottom, #ffffff,#f4f7f9);
+  margin: 2rem 0;
+  &__header {
+    padding: 2.7rem 0 3.5rem;
+    &__title {
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      color: $color-main;
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      }
+    &__heart {
+      position: relative;
+      text-align: center;
+      span {
+        padding: 0 15px;
+        background-color: #FFFFFF;
+        position: relative;
+        z-index: 2;
+      }
+      &::before,&::after {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translateY(-50%);
+        content: "";
+        width: 20%;
+        height: 1px;
+        display: inline-block;
+        background-color: #dce1e5;
+      }
+    }
+  }
+  .show-content {
+    display: flex;
+    animation: fadeInContent 2.2s linear ;
+  }
+  &__content {
+    display: none;
+    margin-bottom: 2rem;
+    &__box {
+      flex: 33.3%;
+      display: flex;
+      .radius {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid $color-main;
+      }
+      .box__text {
+        width: 90%;
+        padding: 0 30px 0 17px;
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        p {
+          color: #384d5c;
+          font-size: 0.8rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+  }
+  &__dot {
+    text-align: center;
+    padding: 2.5rem 0 3rem;
+    &__icon {
+      display: inline-block;;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      border: 1px solid #c7ced3;
+      margin-right: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .active {
+      background-color: #0b0b0b;
+    }
+  }
+}
+.works {
+  &__header {
+    padding: 3.7rem 0 3rem;
+    &__heart {
+      margin-bottom: 31px;
+    }
+    &__about {
+      margin-top: 25px;
+      width: 94%;
+      margin: auto;
+      text-align: center;
+      color: #384d5c;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    text-align: center;
+    &__item {
+      display: inline-block;
+      padding: 5px 22px;
+      &:hover {
+        border-radius: 10px;
+        background-color: $color-main;
+      }
+      &:hover a {
+        color: #FFFFFF;
+      }
+      a {
+        color: #0b0b0b;
+        font-weight: 600;
+      }
+    }
+    .active {
+      color: #FFFFFF;
+      border-radius: 10px;
+      background-color: $color-main;
+       a {
+         color: #FFFFFF;
+       }
+    }
+  }
+  &__pictures {
+    margin-top: 2.2rem;
+    &__slide {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      .box {
+        position: relative;
+        width: 25%;
+        &:hover .box__content {
+          background-color: $color-main;
+          top: 0;
+          opacity: 1;
+        }
+        &__img {
+          display: block;
+        }
+        &__content {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%);
+          transition: .3s linear;
+          opacity: 0;
+          color: #FFFFFF;
+          img {
+            margin-bottom: 1.6rem;
+          }
+          b {
+            margin-bottom: 5px;
+          }
+        }
+        }
+      }
+    }
 }
 .nav {
   @media #{$info-phone} {
@@ -168,12 +392,40 @@
       }
     }
   }
+  .features {
+    &__content {
+      &__box {
+        margin-bottom: 25px;
+        .box__text {
+          width: 80%;
+        }
+      }
+    }
+  }
+  .works {
+    &__pictures {
+      .box {
+        &__content {
+          img {
+            width: 20%;
+            margin-bottom: .8rem;
+          }
+          b {
+            font-size: .6rem;
+          }
+          p {
+            font-size: .5rem;
+          }
+        }
+      }
+    }
+  }
 }
 @media only screen and (min-width: 475px) and(max-width: 767px) {
   .header {
     .slider {
-      .slide {
-        height: 100%;
+      &__img {
+        height: 100vh;
         width: initial;
       }
     }
@@ -201,7 +453,23 @@
       .toggleMenu {
         float: right;
         display: block;
-        margin: 20px;
+        margin: 23px 10px;
+        &__line {
+          transition: all 0.3s ease-in-out
+        }
+      }
+      .change {
+        .toggleMenu__line {
+          transform: rotate(45deg) translate(5px,10px);
+          transition: all .3s linear;
+          &:nth-child(2) {
+            display: none;
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg) translate(-5px,1px);
+            transition: all .3s linear;
+          }
+        }
       }
       .show {
         display: block;
@@ -228,6 +496,45 @@
       }
     }
   }
+  .features {
+    .show-content {
+      display: block;
+    }
+    &__content {
+      &__box {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+        .box__text {
+          h4 {
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  .works {
+    &__header {
+      &__about {
+        font-size: 1rem;
+      }
+    }
+    &__list {
+      &__item {
+        padding: 5px 12px;
+      }
+    }
+    &__pictures {
+      &__slide {
+        .box {
+          width: 50%;
+        }
+      }
+    }
+  }
 }
 @keyframes fadeIn {
   from {
@@ -237,5 +544,13 @@
   to {
     opacity: 1;
     height: 235px;
+  }
+}
+@keyframes fadeInContent {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
   }
 }
