@@ -1,0 +1,103 @@
+.footer {
+  background-color: #1ea78d;
+  padding: 6.2rem 0 7rem;
+  &__content {
+    display: flex;
+    color: #FFFFFF;
+    font-size: 13px;
+    @media only screen and (max-width: 991px) {      flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 25%;
+      padding: 0 15px;
+      @media only screen and (max-width: 991px) {
+        width: 50%;
+        margin-bottom: 20px;
+      }
+      @media only screen and (max-width: 475px) {
+        width: 100%;
+      }
+      p {
+        line-height: 25px;
+      }
+      .logo {
+        margin-bottom: 2.3rem
+      }
+      h4 {
+        margin-bottom: 2.7rem;
+        font-weight: 500;
+        padding-top: 10px;
+      }
+      .form {
+        position: relative;
+        margin-bottom: 25px;
+        @media only screen and (max-width: 991px) {
+          margin-bottom: 0;
+        }
+        input {
+          background-color: transparent;
+          border: 1px solid #FFFFFF;
+          width: 90%;
+          padding: 11px 0;
+        }
+        img {
+          position: absolute;
+          right: 15%;
+          top: 30%;
+          transform: translate(-50%);
+        }
+      }
+      .list {
+        overflow: auto;
+        ul {
+          list-style-type: none;
+          float: left;
+          width: 50%;
+          li {
+            margin-bottom: 14px;
+          }
+        }
+        ul:nth-of-type(even) {
+          float: right;
+          width: 50%;
+          padding-left: 35px;
+        }
+      }
+      .item__detail {
+        padding-top: 4.5rem;
+        @media only screen and (max-width: 475px) {
+          padding-top: 0;
+        }
+        p {
+          padding-left: 12px;
+          img {
+            margin: 0 5px;
+          }
+          span {
+            font-weight: 600;
+            color: #09323f;
+          }
+          &:first-child {
+            line-height: 20px;
+            border-left: 1px solid rgba(23,126,114,0.9);
+          }
+          &:last-child {
+            margin-top: 3.5rem;
+            font-weight: 600;
+            color: #0c444b;
+            @media only screen and (max-width: 991px) {
+             margin-top: 4rem;
+            }
+            @media only screen and (max-width: 767px) {
+              margin-top: 5rem;
+            }
+            @media only screen and (max-width: 475px) {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -20,3 +20,60 @@ h1, h2, h3, h4, h5 {
 img {
   max-width: 100%;
 }
+.features, .works,.team, .fact, .discuss {
+  font-family: "Open Sans";
+  background: linear-gradient(to bottom, #ffffff,#f4f7f9);
+  margin: 2rem 0;
+  &__header {
+    padding: 3.7rem 0 3rem;
+    &__title {
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      color: $color-main;
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    &__heart {
+      position: relative;
+      text-align: center;
+      &:before, &:after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 90px;
+        height: 1px;
+        display: inline-block;
+        background-color: #dce1e5;
+      }
+      &:before {
+        right: 52%;
+      }
+      &:after {
+        left: 52%;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &__about {
+      width: 90%;
+      margin: 26px auto 0;
+      text-align: center;
+      color: #384d5c;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
