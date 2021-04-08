@@ -36,7 +36,7 @@
       }
       h3 {
         font-weight: 600;
-        margin-bottom: 2rem;
+        margin-bottom: 2.3rem;
       }
       form {
         display: flex;
@@ -44,7 +44,11 @@
         input {
           border: none;
           border-bottom: 1px solid #cccccc;
-          padding: 12px 0;
+          padding: 10px 0;
+          @include placeholder {
+            color: #5b646e;
+            opacity: .5;
+          }
         }
         .name {
           width: 50%;
@@ -70,6 +74,9 @@
         border: none;
         background-color: transparent;
         float: right;
+        img {
+          margin-right: 8px;
+        }
         &:hover {
           color: $color-main;
           opacity: .8;
@@ -100,4 +107,8 @@
       }
     }
   }
+}
+.map {
+  height: 215px;
+  width: 100%;
 }

@@ -81,20 +81,17 @@
           &:first-child {
             line-height: 20px;
             border-left: 1px solid rgba(23,126,114,0.9);
-          }
-          &:last-child {
-            margin-top: 3.5rem;
-            font-weight: 600;
-            color: #0c444b;
-            @media only screen and (max-width: 991px) {
-             margin-top: 4rem;
-            }
+            margin-bottom: 3.5rem;
             @media only screen and (max-width: 767px) {
-              margin-top: 5rem;
+              margin-bottom: 5rem;
             }
             @media only screen and (max-width: 475px) {
-              margin-top: 2rem;
+              margin-bottom: 2rem;
             }
+          }
+          &:last-child {
+            font-weight: 600;
+            color: #0c444b;
           }
         }
       }

@@ -35,7 +35,7 @@
         }
       }
     }
-    .active {
+    .works-active {
       color: #FFFFFF;
       border-radius: 10px;
       background-color: $color-main;
@@ -46,23 +46,20 @@
   }
   &__pictures {
     margin-top: 2.2rem;
-    &__slide {
-      display: flex;
-      flex-wrap: wrap;
-      overflow: hidden;
-      .box {
+      .filterDiv {
         position: relative;
         width: 25%;
         @media only screen and (max-width: 767px) {
           width: 50%;
         }
-        &:hover .box__content {
+        &:hover .filterDiv__content {
           background-color: $color-main;
           top: 0;
           opacity: 1;
         }
         &__img {
           display: block;
+          width: 100%;
         }
         &__content {
           width: 100%;
@@ -99,11 +96,12 @@
           }
         }
       }
-    }
     &__item {
-      display: none;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
     }
-    .show-content {
+    .showFilter {
       display: block;
     }
   }
@@ -126,28 +124,9 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-  .bg--img-01 {
-    background-image: url("../img/Rectangle1.png");
-  }
-  .bg--img-02 {
-    background-image: url("../img/Rectangle2.png");
-  }
-  .bg--img-03 {
-    background-image: url("../img/Rectangle3.png");
-  }
-  .bg--img-04 {
-    background-image: url("../img/Rectangle4.png");
-  }
-  .bg--img-05 {
-    background-image: url("../img/Rectangle5.png");
-  }
-  .bg--img-06 {
-    background-image: url("../img/Rectangle6.png");
-  }
-  .bg--img-07 {
-    background-image: url("../img/Rectangle7.png");
-  }
-  .bg--img-08 {
-    background-image: url("../img/Rectangle8.png");
+  @for $i from 1 through 8 {
+    .bg--img-0#{$i} {
+      background-image: url("../img/Rectangle#{$i}.png");
+    }
   }
 }

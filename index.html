@@ -25,38 +25,37 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
-<div class="header" id="header">
+<header class="header" id="header">
     <div class="nav">
         <div class="container">
             <div class="flex-container">
                 <div class="nav-bar">
-                    <h1 class="nav-bar__logo"><a href="#">Brandi</a></h1><span>I'am your tag line</span>
+                    <h1 class="nav-bar__logo"><a href="#header">Brandi</a></h1><span>I'am your tag line</span>
                 </div>
-                <div class="list__menu">
-                    <li class="list__menu__item"><a href="#">Home</a></li>
-                    <li class="list__menu__item"><a href="#">Feature</a></li>
-                    <li class="list__menu__item"><a href="#">works</a></li>
-                    <li class="list__menu__item"><a href="#">Team</a></li>
-                    <li class="list__menu__item"><a href="#">Contact</a></li>
-                </div>
-                <div class="burger " onclick="toggleMenu()">
+                <ul class="list__menu">
+                    <li class="list__menu__item"><a href="#header" >Home</a></li>
+                    <li class="list__menu__item"><a href="#features" >Feature</a></li>
+                    <li class="list__menu__item"><a href="#works" >works</a></li>
+                    <li class="list__menu__item"><a href="#team" >Team</a></li>
+                    <li class="list__menu__item"><a href="#discuss" >Contact</a></li>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
                     <div class="burger__line"></div>
                     <div class="burger__line"></div>
                     <div class="burger__line"></div>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="content">
         <h2 class="content__title">Meet <b>Brandi!</b></h2>
         <h3 class="content__text"><span class="content__text--color">/creative</span> one page template.</h3>
-        <p> we are a team of professionals </p>
+        <p> we are a team of professionals</p>
     </div>
     <div class="slider">
-        <div class="slider__img"></div>
-        <div class="slider__img"></div>
-        <div class="slider__img"></div>
+        <div class="slider__img" style="background-image: url('./assets/img/headerimg.png')"></div>
+        <div class="slider__img" style="background-image: url('./assets/img/headerimg2.png')"></div>
+        <div class="slider__img" style="background-image: url('./assets/img/headerimg3.png')"></div>
     </div>
     <div class="dot">
         <span class="dot__icon" onclick="showSlide(0,'slider__img','dot__icon')"></span>
@@ -71,8 +70,8 @@
             <li><i class="fas fa-basketball-ball"></i></li>
         </ul>
     </div>
-    <button class="move__top"><i class="fas fa-angle-double-up"></i></button>
-</div>
+    <button type="submit" class="move__top"><i class="fas fa-angle-double-up"></i></button>
+</header>
 <section class="features" id="features">
     <div class="container">
         <div class="features__header">
@@ -190,240 +189,89 @@
                 </p>
         </div>
         <ul class="works__list">
-            <li class="works__list__item active">
-                <button type="button" onclick="showSlide(0,'works__pictures__item','works__list__item')">All</button>
+            <li class="works__list__item works-active">
+                <button type="button" class="btn-works" data-filter="all">All</button>
             </li>
             <li class="works__list__item">
-                <button type="button" onclick="showSlide(1,'works__pictures__item','works__list__item')">Branding</button>
+                <button type="button" class="btn-works" data-filter="branding">Branding</button>
             </li>
             <li class="works__list__item">
-                <button type="button" onclick="showSlide(2,'works__pictures__item','works__list__item')">Web</button>
+                <button type="button" class="btn-works" data-filter="web">Web</button>
             </li>
             <li class="works__list__item">
-                <button type="button" onclick="showSlide(3,'works__pictures__item','works__list__item')">Logo Design</button>
+                <button type="button" class="btn-works" data-filter="logo">Logo Design</button>
             </li>
             <li class="works__list__item">
-                <button type="button" onclick="showSlide(4,'works__pictures__item','works__list__item')">Photography</button>
+                <button type="button" class="btn-works" data-filter="photography">Photography</button>
             </li>
         </ul>
     </div>
     <div class="works__pictures">
         <div class="works__pictures--all works__pictures__item">
-            <div class="works__pictures__slide">
-                <div class="box">
+                <div class=" filterDiv photography">
                     <img src="./assets/img/Rectangle1.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
+                    <div class="filterDiv__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(1)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
+                        <b >Labore et dolore magnam</b>
+                        <p >Photography</p>
                     </div>
                 </div>
-                <div class="box">
+                <div class=" filterDiv web">
                     <img src="./assets/img/Rectangle2.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
+                    <div class="filterDiv__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(2)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
+                        <b>Labore et dolore magnam</b>
+                        <p>Photography</p>
                     </div>
                 </div>
-                <div class="box">
+                <div class=" filterDiv logo">
                     <img src="./assets/img/Rectangle3.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
+                    <div class="filterDiv__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(3)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
+                        <b>Labore et dolore magnam</b>
+                        <p>Photography</p>
                     </div>
                 </div>
-                <div class="box">
+                <div class=" filterDiv photography">
                     <img src="./assets/img/Rectangle4.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
+                    <div class="filterDiv__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(4)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
+                        <b>Labore et dolore magnam</b>
+                        <p>Photography</p>
                     </div>
                 </div>
-            </div>
-            <div class="works__pictures__slide">
-                <div class="box">
-                    <img src="./assets/img/Rectangle5.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
+                <div class=" filterDiv branding">
+                    <img src="./assets/img/Rectangle5.png" alt="Rectangle" class="box__img">
+                    <div class="filterDiv__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(5)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
+                        <b>Labore et dolore magnam</b>
+                        <p>Photography</p>
                     </div>
                 </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle6.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
+                <div class=" filterDiv logo">
+                    <img src="./assets/img/Rectangle6.png" alt="Rectangle" class="box__img">
+                    <div class="filterDiv__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(6)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
+                        <b>Labore et dolore magnam</b>
+                        <p>Photography</p>
                     </div>
                 </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle7.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
+                <div class=" filterDiv branding">
+                    <img src="./assets/img/Rectangle7.png" alt="Rectangle" class="box__img">
+                    <div class="filterDiv__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(7)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
+                        <b>Labore et dolore magnam</b>
+                        <p>Photography</p>
                     </div>
                 </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle8.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
+                <div class=" filterDiv web">
+                    <img src="./assets/img/Rectangle8.png" alt="Rectangle" class="box__img">
+                    <div class="filterDiv__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(8)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
+                        <b>Labore et dolore magnam</b>
+                        <p>Photography</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="works__pictures--branding works__pictures__item">
-            <div class="works__pictures__slide">
-                <div class="box">
-                    <img src="./assets/img/Rectangle1.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(1)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle2.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(2)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle3.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(3)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle4.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(4)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="works__pictures--web works__pictures__item">
-            <div class="works__pictures__slide">
-                <div class="box">
-                    <img src="./assets/img/Rectangle5.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(5)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle6.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(6)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle7.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(7)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle8.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(8)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="works__pictures--logo works__pictures__item">
-            <div class="works__pictures__slide">
-                <div class="box">
-                    <img src="./assets/img/Rectangle2.png" alt="Rectangle" class="box__img">
-
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(1)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle4.png" alt="Rectangle" class="box__img">
-
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(2)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle1.png" alt="Rectangle" class="box__img">
-
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(3)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle3.png" alt="Rectangle" class="box__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(4)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="works__pictures--photo works__pictures__item">
-            <div class="works__pictures__slide">
-                <div class="box">
-                    <img src="./assets/img/Rectangle7.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(5)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle5.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(6)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle6.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(7)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/Rectangle8.png" alt="Rectangle" class="rectangle__img">
-                    <div class="box__content">
-                        <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(8)">
-                        <b class="">Labore et dolore magnam</b>
-                        <p class="">Photography</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Modal -->
@@ -437,7 +285,7 @@
         </div>
     </div>
 </section>
-<section class="team">
+<section class="team" id="team">
     <div class="container">
         <div class="team__header">
             <h3 class="team__header__title">meet our team</h3>
@@ -689,7 +537,7 @@
                 </div>
         </div>
     </div>
-</section>
+</section >
 <section class="fact">
     <div class="container">
         <div class="fact__header">
@@ -698,28 +546,28 @@
         </div>
         <div class="fact__content" >
             <div class="fact__content__item" >
-                    <img src="./assets/img/hours.png" alt="" class="item__img">
+                    <img src="./assets/img/hours.png" alt="hours" class="item__img">
                 <div class="item__info">
                     <h3 class="counter">3200</h3>
                     <p>hours of work</p>
                 </div>
             </div>
             <div class="fact__content__item" >
-                    <img src="./assets/img/clients.png" alt="" class="item__img">
+                    <img src="./assets/img/clients.png" alt="clients" class="item__img">
                 <div class="item__info">
                     <h3 class="counter">120</h3>
                     <p>Satisfied Clinets</p>
                 </div>
             </div>
             <div class="fact__content__item" >
-                    <img src="./assets/img/Projects.png" alt="" class="item__img">
+                    <img src="./assets/img/Projects.png" alt="project" class="item__img">
                 <div class="item__info">
                     <h3 class="counter">360</h3>
                     <p> Projects delivered</p>
                 </div>
             </div>
             <div class="fact__content__item" >
-                    <img src="./assets/img/Awareds.png" alt="" class="item__img">
+                    <img src="./assets/img/Awareds.png" alt="awareds" class="item__img">
                 <div class="item__info">
                     <h3 class="counter">42</h3>
                     <p>Awards Won</p>
@@ -728,11 +576,8 @@
         </div>
     </div>
 </section>
-<section class="discuss">
-<!--    <div class="bg">-->
-<!--        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.884602263173!2d106.67937421911753!3d10.775180877156775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b3357f417%3A0x23e417f7b7cd1b1f!2sC%C3%B4ng%20ty%20gumi%20Vietnam!5e0!3m2!1svi!2s!4v1617071557622!5m2!1svi!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
-<!--    </div>-->
-    <div class="container">
+<section class="discuss" id="discuss">
+        <div class="container">
             <div class="discuss__header">
                 <h3 class="discuss__header__title">Let's Discuss</h3>
                 <div class="discuss__header__heart">
@@ -762,7 +607,7 @@
                             <input type="text" placeholder="Message">
                         </div>
                     </form>
-                    <button><img src="./assets/img/Envelope.png" alt="envelope"> Send Message</button>
+                    <button type="submit"><img src="./assets/img/Envelope.png" alt="envelope">  Send Message</button>
                 </div>
                 <div class="discuss__content__icon">
                     <ul>
@@ -773,26 +618,28 @@
                         <li><img src="./assets/img/google%20plus.png" alt="icon"></li>
                     </ul>
                 </div>
+            </div>
         </div>
-    </div>
-    <img src="./assets/img/Map.png" alt="bg">
 </section>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.884602263173!2d106.67937421911753!3d10.775180877156775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b3357f417%3A0x23e417f7b7cd1b1f!2sC%C3%B4ng%20ty%20gumi%20Vietnam!5e0!3m2!1svi!2s!4v1617071557622!5m2!1svi!2s" style="border:0;" width="100%" height="100%" allowfullscreen="" loading="lazy"></iframe>
+</div>
 <footer class="footer">
     <div class="container">
         <div class="footer__content">
             <div class="footer__content__item">
                 <div class="logo">
-                    <a href=""><img src="./assets/img/Brandi.svg" alt=""></a>
+                    <a href=""><img src="./assets/img/Brandi.svg" alt="logo"></a>
                 </div>
                 <p>eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat.</p>
             </div>
             <div class="footer__content__item">
                 <h4>Subscribe</h4>
-                <div class="form">
+                <form class="form">
                     <input type="text">
                     <img src="./assets/img/Shape5.png" alt="shape">
-                </div>
+                </form>
                 <p>eusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="footer__content__item">
@@ -825,7 +672,6 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-
 <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
 <script src="assets/js/vendor/bootstrap.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
