@@ -18,18 +18,18 @@
     padding: 5.7rem 0 1.5rem;
   }
   &__content {
-    display: flex;
+    @include flex;
     flex-wrap: wrap;
     &__item {
       color: #FFFFFF;
       text-align: center;
       width: 25%;
       margin-bottom: 4.5rem;
-      @media only screen and (max-width: 767px) {
+      @media #{$info-phone} {
         width: 50%;
         margin-bottom: 0;
       }
-      @media only screen and (max-width: 475px) {
+      @media #{$info-mobile} {
         width: 100%;
       }
       .item__info {

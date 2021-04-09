@@ -6,9 +6,9 @@
     padding: 3.7rem 0 4.8rem;
   }
   &__content {
-    display: flex;
+    @include flex;
     margin-bottom: 6.8rem;
-    @media only screen and (max-width: 767px) {
+    @media #{$info-phone} {
       flex-wrap: wrap;
     }
     &__address {
@@ -30,7 +30,7 @@
     &__form {
       padding: 0 20px 0 10px;
       width: 68%;
-      @media only screen and (max-width: 767px) {
+      @media #{$info-mobile} {
         width: 100%;
         margin-bottom: 3rem;
       }
@@ -39,7 +39,7 @@
         margin-bottom: 2.3rem;
       }
       form {
-        display: flex;
+        @include flex;
         flex-wrap: wrap;
         input {
           border: none;
@@ -87,14 +87,14 @@
       width: 7%;
       padding: 0 13px;
       text-align: center;
-      @media only screen and (max-width: 767px) {
+      @media #{$info-phone} {
         order: 3;
         width: 50%;
       }
       ul {
         margin-top: 1rem;
         list-style-type: none;
-        @media only screen and (max-width: 767px) {
+        @media #{$info-mobile} {
           margin-top: 0;
         }
         li {

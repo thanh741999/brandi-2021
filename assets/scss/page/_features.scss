@@ -3,9 +3,9 @@
     padding: 2.7rem 0 3.5rem;
   }
   .show-content {
-    display: flex;
+    @include flex;
     animation: fadeIn 1.3s linear ;
-    @media only screen and (max-width: 767px) {
+    @media #{$info-mobile} {
       display: block;
     }
   }
@@ -14,17 +14,17 @@
     margin-bottom: 2rem;
     &__box {
       flex: 33.3%;
-      display: flex;
-      @media only screen and (max-width: 767px) {
+      @include flex;
+      @media #{$info-mobile} {
         width: 80%;
         margin: auto;
         margin-bottom: 20px;
       }
-      @media only screen and (max-width: 475px) {
+      @media #{$info-mobile} {
         margin-bottom: 25px;
       }
       .radius {
-        display: flex;
+        @include flex;
         align-items: center;
         justify-content: center;
         width: 40px;
@@ -35,22 +35,22 @@
       .box__text {
         width: 90%;
         padding: 0 30px 0 17px;
-        @media only screen and (max-width: 475px) {
+        @media #{$info-mobile} {
           width: 80%;
         }
         h4 {
           font-size: 1.2rem;
           font-weight: 600;
           margin-bottom: 20px;
-          @media only screen and (max-width: 767px) {
+          @media #{$info-phone} {
             margin-bottom: 10px;
           }
         }
         p {
           color: #384d5c;
-          font-size: 0.8rem;
+          @include font-size(13px);
           line-height: 1.2rem;
-          @media only screen and (max-width: 767px) {
+          @media #{$info-phone} {
             font-size: 1.2rem;
           }
         }
@@ -72,7 +72,7 @@
       }
     }
     .active {
-      background-color: #0b0b0b;
+      background-color: #062033;
     }
   }
 }

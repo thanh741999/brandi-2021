@@ -1,11 +1,4 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-body {
-  font-family: "Open Sans";
-}
+
 .header {
   color: #FFFFFF;
   height: 100vh;
@@ -17,18 +10,18 @@ body {
     opacity: 0.8;
     z-index: 3;
     .flex-container {
-      display: flex;
+      @include flex();
       justify-content: space-between;
       align-items: center;
       height: 70px;
       .nav-bar {
-        display: flex;
+        @include flex();
         justify-content: center;
         align-items: stretch;
         &__logo {
           font-family: 'Pacifico', cursive;
-          font-size: 28px;
-          padding: 23px 0 15px;
+          @include font-size(28px);
+          padding: 18px 0 15px;
           display: inline-block;
           a {
             color: #FFFFFF;
@@ -36,29 +29,25 @@ body {
           &::after {
             content: "|";
             color: #154357;
-            font-size: 13px;
-            font-family: 'Open Sans', sans-serif;
+            @include font-size(13px);
             margin-left: 26px;
           }
         }
         span {
-          font-family: 'Open Sans', sans-serif;
           color: #5d6466;
-          font-size: 13px;
+          @include font-size(13px);
           margin-left: 15px;
           display: inline-block;
-          padding: 35px 0 0;
+          padding: 31px 0 0;
         }
       }
       .list__menu {
-        width: 40%;
         text-decoration: none;
-        display: flex;
+        @include flex();
         justify-content: space-between;
         align-items: center;
         list-style-type: none;
-        margin-right: 15px;
-        @media only screen and (max-width: 767px) {
+        @media #{$info-phone} {
           opacity: 0;
           height: 91vh;
           width: 0;
@@ -78,6 +67,8 @@ body {
           padding: 27px 0 20px;
           border-top: 1px solid transparent;
           position: relative;
+          margin: 0 17px;
+          @include font-size(13px);
           &:before {
             content: "";
             height: 1px;
@@ -86,7 +77,7 @@ body {
             display: block;
             position: absolute;
             top: 0;
-            @media only screen and (max-width: 767px) {
+            @media #{$info-phone} {
               top: unset;
               bottom: 30%;
               transform: translateY(-50%)
@@ -105,7 +96,7 @@ body {
         display: none;
         border: none;
         background: transparent;
-        @media only screen and(max-width: 767px) {
+        @media #{$info-phone} {
           display: block;
           margin-top: 20px;
         }
@@ -113,13 +104,13 @@ body {
           margin-bottom: 5px;
           width: 25px;
           height: 1px;
-          background-color: white;
-          @media only screen and (max-width: 767px) {
+          background-color: #FFFFFF;
+          @media #{$info-phone}{
             transition: all .3s linear;
           }
         }
       }
-      @media only screen and (max-width: 767px) {
+      @media #{$info-phone} {
         .change {
           .burger__line {
             transform: rotate(33deg) translate(2px,6px);
@@ -134,7 +125,7 @@ body {
           }
         }
         .show-list {
-          display: flex;
+          @include flex();
           width: 30%;
           opacity: 1;
         }
@@ -146,22 +137,24 @@ body {
     opacity: 1;
   }
   .content {
-    position: absolute;
+    @include center-inside-element;
     top: 52%;
-    left: 50%;
     transform: translate(-50%);
     line-height: 2.5rem;
     z-index: 2;
     &__text {
-      font-size: 2.4rem;
+      @include font-size(48px);
       margin-bottom: 10px;
-      @media only screen and (max-width: 991px) {
+      @media screen and (max-width: 1280px) {
+        font-size: 2.4rem;
+      }
+      @media #{$info-tablet-vertical} {
         font-size: 2rem;
       }
-      @media only screen and (max-width: 767px) {
+      @media #{$info-phone} {
         font-size: 1.4rem;
       }
-      @media only screen and (max-width: 475px) {
+      @media #{$info-mobile} {
         font-size: 1rem;
       }
       &--color {
@@ -169,17 +162,17 @@ body {
       }
     }
     &__title {
-      font-size: 3.5rem;
+      @include font-size(62px);
       text-align: center;
       font-weight: 400;
       margin-bottom: 15px;
-      @media only screen and (max-width: 991px) {
+      @media #{$info-tablet-vertical} {
         font-size: 3rem;
       }
-      @media only screen and (max-width: 767px) {
-        font-size: 2rem;
+      @media #{$info-phone} {
+        font-size: 2.5rem;
       }
-      @media only screen and (max-width: 475px) {
+      @media #{$info-mobile} {
         font-size: 1.5rem;
       }
     }
@@ -187,50 +180,46 @@ body {
       text-align: center;
       position: relative;
       font-weight: 300;
-      @media only screen and (max-width: 475px) {
+      @media #{$info-mobile} {
         font-size: .7rem;
       }
       &::before, &::after {
         content: "";
-        position: absolute;
-        top: 50%;
+        @include vertical-align(absolute);
         display: inline-block;
         height: 1px;
         width: 25px;
         background-color: #0feb9e;
-        transform: translateX(-50%);
       }
       &::before {
-        left: 20%;
-        @media only screen and (max-width: 991px) {
-          left: 15%;
+        left: 25%;
+        @media screen and (max-width: 1280px) {
+          left: 20%;
         }
-        @media only screen and (max-width: 767px) {
-          left: 0;
+        @media #{$info-tablet-vertical} {
+          left: 10%;
         }
-        @media only screen and (max-width: 475px) {
-          left: -5px;
+        @media #{$info-phone} {
+          left: -25px;
         }
       }
       &::after {
-        right: 15%;
-        @media only screen and (max-width: 991px) {
+        right: 25%;
+        @media screen and (max-width: 1280px) {
+          right: 20%;
+        }
+        @media #{$info-tablet-vertical} {
           right: 10%;
         }
-        @media only screen and (max-width: 767px) {
-          right: -25px;
-        }
-        @media only screen and (max-width: 475px) {
+        @media #{$info-phone} {
           right: -25px;
         }
       }
     }
   }
   .dot {
-    position: absolute;
-    top: 50%;
+    @include vertical-align(absolute);
     right: 3%;
-    transform: translateX(-50%);
     &__icon {
       margin-bottom: 15px;
       display: block;
@@ -240,7 +229,7 @@ body {
       border-radius: 50%;
       border: 1px solid #333a3e;
       transition: 0.8s;
-      @media screen and (max-width: 767px){
+      @media #{$info-phone}{
         display: none;
       }
       &:hover {

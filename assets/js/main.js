@@ -36,10 +36,29 @@ $(document).ready(function (){
         $(this).addClass(' works-active').siblings().removeClass(' works-active');
     })
     //counter--------
-    $('.counter').counterUp({
-        delay: 10,
-        time: 2000
-    });
+    $(window).scroll(function (){
+        $('.counter').each(function() {
+            var $this = $(this), countTo = $this.attr('data-count');
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $({ countNum: $this.text()}).animate({
+                        countNum: countTo
+                    },
+                    {
+                        duration: 5000,
+                        easing:'linear',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            $this.text(this.countNum);
+                            //alert('finished');
+                        }
+                    });
+            }
+        });
+    })
     //stick----------
     $('.team__slide').slick({
         infinite: true,

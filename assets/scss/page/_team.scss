@@ -4,10 +4,10 @@
     padding: 3.7rem 0 6.7rem;
   }
   &__slide {
-    display: flex;
+    @include flex;
     padding-bottom: 5rem;
     margin-bottom: 5.5rem;
-    @media only screen and (max-width: 991px) {
+    @media #{$info-tablet-vertical} {
       flex-wrap: wrap;
       padding-bottom: 0;
     }
@@ -15,18 +15,18 @@
       padding-bottom: 80px;
     }
     .slick-track {
-      display: flex;
+      @include flex;
     }
     &__box{
       width: 25%;
       position: relative;
       margin: 0 15px;
       outline: none;
-      @media only screen and (max-width: 991px) {
+      @media #{$info-tablet-vertical} {
         width: 50%;
         margin-bottom: 7rem;
       }
-      @media only screen and (max-width: 475px) {
+      @media #{$info-mobile} {
         width: 100%;
       }
       .team--img {
@@ -50,17 +50,17 @@
         padding: 0 15px;
         opacity: 0;
         &__text {
-          font-size: 0.9rem;
+          @include font-size(16px);
           @media only screen and (max-width: 1198px) {
             font-size: .8rem;
           }
-          @media only screen and (max-width: 991px) {
+          @media #{$info-tablet-vertical} {
             font-size: .9rem;
           }
           @media only screen and (max-width: 630px) {
             font-size: 1.1rem;
           }
-          @media only screen and (max-width: 475px){
+          @media #{$info-mobile}{
             font-size: 1.5rem;
           }
           
@@ -115,14 +115,14 @@
   }
   .slick-dots {
     list-style-type: none;
-    display: flex;
+    @include flex;
     justify-content: center;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     .slick-active, .slick-active{
-      background: $color-default-dark;
+      background: #062033;
     }
     li {
       cursor: pointer;
