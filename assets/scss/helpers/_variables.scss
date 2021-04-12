@@ -1,7 +1,7 @@
 //
 // Colors
 //
-
+$color-main: #0eb493;
 // Default
 $color-default: #f2f2f2;
 $color-default-lightest: #fff;
@@ -47,8 +47,10 @@ $hsize: $size/2;
 //$info-phone: "only screen and (max-width : 640px)";
 
 $info-tablet-horizontal: "only screen and (max-width : 1160px)";
-$info-tablet-vertical: "only screen and (max-width : 900px)";
-$info-phone: "only screen and (max-width : 767px)";
+
+$info-tablet-vertical: "only screen and (max-width : 991px)";
+$info-phone:"only screen and (max-width : 767px)";
+$info-mobile:"only screen and (max-width: 475px)";
 $info-phone-4: "only screen and (max-width : 320px)";
 
 $primary-green: #0eb493;

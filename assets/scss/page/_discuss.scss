@@ -1,0 +1,114 @@
+.discuss {
+  position: relative;
+  background: #FFFFFF;
+  margin-bottom: 0;
+  &__header {
+    padding: 3.7rem 0 4.8rem;
+  }
+  &__content {
+    @include flex;
+    margin-bottom: 6.8rem;
+    @media #{$info-phone} {
+      flex-wrap: wrap;
+    }
+    &__address {
+      width: 25%;
+      @media only screen and (max-width: 767px) {
+        width: 50%;
+        order: 2;
+      }
+      h3 {
+        font-weight: 400;
+        margin-bottom: 2.3rem;
+      }
+      p {
+        color: #6a737b;
+        font-size: 13px;
+        line-height: 23px;
+      }
+    }
+    &__form {
+      padding: 0 20px 0 10px;
+      width: 68%;
+      @media #{$info-mobile} {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+      h3 {
+        font-weight: 600;
+        margin-bottom: 2.3rem;
+      }
+      form {
+        @include flex;
+        flex-wrap: wrap;
+        input {
+          border: none;
+          border-bottom: 1px solid #cccccc;
+          padding: 10px 0;
+          @include placeholder {
+            color: #5b646e;
+            opacity: .5;
+          }
+        }
+        .name {
+          width: 50%;
+          input {
+            width: 90%;
+          }
+        }
+        .mail {
+          width: 50%;
+          input {
+            width: 100%;
+          }
+        }
+        .message {
+          margin: 2rem 0 2.3rem;
+          width: 100%;
+          input {
+            width: 100%;
+          }
+        }
+      }
+      button {
+        border: none;
+        background-color: transparent;
+        float: right;
+        img {
+          margin-right: 8px;
+        }
+        &:hover {
+          color: $color-main;
+          opacity: .8;
+        }
+      }
+    }
+    &__icon {
+      width: 7%;
+      padding: 0 13px;
+      text-align: center;
+      @media #{$info-phone} {
+        order: 3;
+        width: 50%;
+      }
+      ul {
+        margin-top: 1rem;
+        list-style-type: none;
+        @media #{$info-mobile} {
+          margin-top: 0;
+        }
+        li {
+          cursor: pointer;
+          margin-bottom: 18px;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+.map {
+  height: 215px;
+  width: 100%;
+}

@@ -1,0 +1,49 @@
+.fact {
+  background-image: url("../img/fact-bg.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(24, 43, 58, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  &__header {
+    padding: 5.7rem 0 1.5rem;
+  }
+  &__content {
+    @include flex;
+    flex-wrap: wrap;
+    &__item {
+      color: #FFFFFF;
+      text-align: center;
+      width: 25%;
+      margin-bottom: 4.5rem;
+      @media #{$info-phone} {
+        width: 50%;
+        margin-bottom: 0;
+      }
+      @media #{$info-mobile} {
+        width: 100%;
+      }
+      .item__info {
+        margin: 2.5rem 0 5rem;
+        h3 {
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin: 10px 0 0;
+        }
+        p {
+          text-transform: uppercase;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
