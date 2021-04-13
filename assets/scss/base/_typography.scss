@@ -5,6 +5,18 @@ html, body {
   font-size: 16px;
   font-family: "Open Sans";
   -webkit-font-smoothing: antialiased;
+  .move__top {
+    display: none;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: black;
+    border-radius: 6px;
+    border: none;
+    z-index: 10;
+  }
   @media #{$info-tablet-horizontal} {
     font-size: 15px;
   }

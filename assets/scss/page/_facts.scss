@@ -15,19 +15,18 @@
     z-index: -2;
   }
   &__header {
-    padding: 5.7rem 0 1.5rem;
+    padding: 5.5% 0 0;
   }
   &__content {
     @include flex;
     flex-wrap: wrap;
+    margin-bottom: 6.5vh;
     &__item {
       color: #FFFFFF;
       text-align: center;
       width: 25%;
-      margin-bottom: 4.5rem;
       @media #{$info-phone} {
         width: 50%;
-        margin-bottom: 0;
       }
       @media #{$info-mobile} {
         width: 100%;

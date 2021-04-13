@@ -6,13 +6,13 @@ $(document).ready(function (){
         const scroll_top = document.documentElement.scrollTop;
         var slide_height = $('.slider').innerHeight();
         var move_top = document.getElementsByClassName('move__top')[0];
-        var nav = document.getElementsByClassName('nav')[0];
+        var header = document.getElementsByClassName('header')[0];
         if(scroll_top >= slide_height) {
-            nav.classList.add('nav-active');
+            header.classList.add('nav-active');
             move_top.style.display = "block";
         }
         else {
-            nav.classList.remove('nav-active');
+            header.classList.remove('nav-active');
             move_top.style.display =" none";
         }
         move_top.addEventListener('click',function () {
@@ -25,14 +25,14 @@ $(document).ready(function (){
     $('.btn-works').click(function() {
         var dataAttr = $(this).attr('data-filter');
         if (dataAttr == 'all') {
-            $('.filterDiv').show(1000);
+            $('.box').show(1000);
         }
         else {
-            $('.filterDiv').not('.'+dataAttr).hide(1000);
-            $('.filterDiv').filter('.'+dataAttr).show(1000);
+            $('.box').not('.'+dataAttr).hide(1000);
+            $('.box').filter('.'+dataAttr).show(1000);
         }
     })
-    $('.works__list__item').click(function() {
+    $('li').click(function() {
         $(this).addClass(' works-active').siblings().removeClass(' works-active');
     })
     //counter--------
@@ -117,10 +117,10 @@ function showSlide(n,listSlide,dot) {
     dots[n].className += " active";
 }
 showSlide(slideIndex,'slider__img','dot__icon');
-showSlide(slideIndex,'features__content','features__dot__icon');
+showSlide(slideIndex,'features__slider__content','features__dot__icon');
 //toggle navbar
 function toggleMenu() {
-    var menu = document.getElementsByClassName('list__menu');
+    var menu = document.getElementsByClassName('menu__bar');
     var tabMenu = document.getElementsByClassName('burger');
     tabMenu[0].classList.toggle('change');
     menu[0].classList.toggle('show-list');

@@ -1,12 +1,12 @@
 .team {
   background: #FFFFFF;
   &__header {
-    padding: 3.7rem 0 6.7rem;
+    padding: 4.5vh 0 16vh;
   }
   &__slide {
     @include flex;
-    padding-bottom: 5rem;
-    margin-bottom: 5.5rem;
+    padding-bottom: 7%;
+    margin-bottom: 7.6%;
     @media #{$info-tablet-vertical} {
       flex-wrap: wrap;
       padding-bottom: 0;
@@ -75,8 +75,7 @@
           left: 50%;
           bottom: 5%;
           transform: translate(-50%);
-          ul {
-            list-style-type: none;
+          list-style-type: none;
             li {
               cursor: pointer;
               display: inline-block;
@@ -92,7 +91,6 @@
                 opacity: 0.8;
               }
             }
-          }
         }
       }
       .box__info {

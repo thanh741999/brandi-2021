@@ -1,5 +1,130 @@
-
-//features
+.header {
+  max-height: 70px;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  transition: all .3s ease-in-out;
+  background-color: rgba(14,44,42,0.8);
+  opacity: 0.8;
+  .menu {
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      @include font-size(28px);
+      h1 {
+        padding-bottom: 20px;
+        display: inline-block;
+        font-family: 'Pacifico', cursive;
+        &::after {
+          content: "|";
+          color: #154357;
+          @include font-size(13px);
+          margin-left: 20px;
+        }
+      }
+      span {
+        color: #5d6466;
+        @include font-size(13px);
+        margin-left: 10px;
+        display: inline-block;
+        padding: 31px 0 0;
+      }
+    }
+    &__bar {
+      @include flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+        @media #{$info-phone} {
+          opacity: 0;
+          height: 91vh;
+          width: 0;
+          position: absolute;
+          top: 90%;
+          right: 0;
+          transform: translateY(7px);
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          background-color: #0b0b0b;
+          overflow: hidden;
+          transition: .3s linear;
+          margin-right: 0;
+        }
+      li {
+        padding: 27px 0 20px;
+        border-top: 1px solid transparent;
+        position: relative;
+        margin: 0 17px;
+        @include font-size(13px);
+        a {
+          color: #FFFFFF;
+        }
+        &:before {
+          content: "";
+          height: 1px;
+          width: 0;
+          background-color: #32b0ee;
+          display: block;
+          position: absolute;
+          top: 0;
+          @media #{$info-phone} {
+            top: unset;
+            bottom: 30%;
+            transform: translateY(-50%)
+          }
+        }
+        &:hover::before {
+          width: 100%;
+          transition: 1.3s;
+        }
+      }
+    }
+    .burger {
+      display: none;
+      border: none;
+      background: transparent;
+      @media #{$info-phone} {
+        display: block;
+        margin-top: 20px;
+      }
+      &__line {
+        margin-bottom: 5px;
+        width: 25px;
+        height: 1px;
+        background-color: #FFFFFF;
+        @media #{$info-phone}{
+          transition: all .3s linear;
+        }
+      }
+    }
+    @media #{$info-phone} {
+      .change {
+        .burger__line {
+          transform: rotate(33deg) translate(2px,6px);
+          transition: all .3s linear;
+          &:nth-child(2) {
+            display: none;
+          }
+          &:nth-child(3) {
+            transform: rotate(-36deg) translate(-2px,-1px);
+            transition: all .3s linear;
+          }
+        }
+      }
+      .show-list {
+        @include flex();
+        width: 30%;
+        opacity: 1;
+      }
+    }
+  }
+}
+.nav-active {
+  background-color: #000000;
+  opacity: 1;
+}
 .nav {
   @media #{$info-phone} {
     

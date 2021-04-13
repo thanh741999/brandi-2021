@@ -1,6 +1,7 @@
-.features,.works {
+.features {
+  @include background-gradient(#ffffff,#f4f7f9);
   &__header {
-    padding: 2.7rem 0 3.5rem;
+    padding-bottom: 6vh;
   }
   .show-content {
     @include flex;
@@ -9,57 +10,66 @@
       display: block;
     }
   }
-  &__content {
-    display: none;
-    margin-bottom: 2rem;
-    &__box {
-      flex: 33.3%;
-      @include flex;
-      @media #{$info-mobile} {
+  &__slider {
+    @include flex;
+    margin-bottom: 5vh;
+    &__content {
+      flex-wrap: wrap;
+      display: none;
+      @media #{$info-phone} {
         width: 80%;
-        margin: auto;
-        margin-bottom: 20px;
+        margin: 0 auto;
       }
-      @media #{$info-mobile} {
-        margin-bottom: 25px;
-      }
-      .radius {
+      .item {
+        width: 33.3%;
         @include flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid $color-main;
-      }
-      .box__text {
-        width: 90%;
-        padding: 0 30px 0 17px;
-        @media #{$info-mobile} {
-          width: 80%;
-        }
-        h4 {
-          font-size: 1.2rem;
-          font-weight: 600;
+        @media #{$info-phone} {
+          width: 100%;
           margin-bottom: 20px;
-          @media #{$info-phone} {
-            margin-bottom: 10px;
-          }
         }
-        p {
-          color: #384d5c;
-          @include font-size(13px);
-          line-height: 1.2rem;
-          @media #{$info-phone} {
+        @media #{$info-mobile} {
+          margin-bottom: 25px;
+        }
+        .radius {
+          @include flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid $color-main;
+        }
+        .box__text {
+          width: 90%;
+          padding: 0 30px 0 17px;
+          @media #{$info-mobile} {
+            width: 80%;
+          }
+          h4 {
             font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            @media #{$info-phone} {
+              margin-bottom: 10px;
+            }
+          }
+          p {
+            color: #384d5c;
+            @include font-size(13px);
+            line-height: 1.2rem;
+            @media #{$info-phone} {
+              font-size: 1.2rem;
+              line-height: unset;
+            }
           }
         }
       }
     }
+
   }
   &__dot {
     text-align: center;
-    padding: 2.5rem 0 3rem;
+    padding: 5vh 0 2.5vh;
     &__icon {
       display: inline-block;;
       height: 8px;
