@@ -31,6 +31,8 @@
         padding: 31px 0 0;
       }
     }
+
+    //====== navBar========
     &__bar {
       @include flex;
       justify-content: space-between;
@@ -38,7 +40,7 @@
       list-style-type: none;
         @media #{$info-phone} {
           opacity: 0;
-          height: 91vh;
+          height: 100vh;
           width: 0;
           position: absolute;
           top: 90%;
@@ -81,6 +83,9 @@
         }
       }
     }
+    //======End navBar========
+
+
     .burger {
       display: none;
       border: none;
@@ -99,6 +104,9 @@
         }
       }
     }
+
+
+    //===== reponsive burger and menubar=======
     @media #{$info-phone} {
       .change {
         .burger__line {
@@ -121,9 +129,27 @@
     }
   }
 }
+//===== Header background on scroll=====
 .nav-active {
   background-color: #000000;
   opacity: 1;
+}
+//=====Move Top button======
+.move__top {
+  display: none;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: black;
+  border-radius: 6px;
+  border: none;
+  z-index: 10;
+  @media #{$info-phone} {
+    right: unset;
+    left: 30px;
+  }
 }
 .nav {
   @media #{$info-phone} {

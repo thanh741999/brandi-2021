@@ -11,12 +11,14 @@
       flex-wrap: wrap;
       padding-bottom: 0;
     }
+    //====== change slick css =======
     .slick-list {
       padding-bottom: 80px;
     }
     .slick-track {
       @include flex;
     }
+    //====== End change slick css =======
     &__box{
       width: 25%;
       position: relative;
@@ -32,6 +34,7 @@
       .team--img {
         width: 100%;
       }
+      //====== hover show opacity box=======
       &:hover .box__content{
         height: 100%;
         transition: .3s linear;
@@ -40,6 +43,9 @@
       &:hover .box__info h4 {
         color: $color-main;
       }
+      //===== end hover show opacity box=======
+
+      //===== opacity box======
       .box__content {
         height: 0;
         position: absolute;
@@ -93,6 +99,9 @@
             }
         }
       }
+      //=====End opacity box======
+
+
       .box__info {
         width: 100%;
         text-align: center;
@@ -111,6 +120,9 @@
       }
     }
   }
+
+
+  //===== change slick css=======
   .slick-dots {
     list-style-type: none;
     @include flex;

@@ -87,16 +87,15 @@
       width: 7%;
       padding: 0 13px;
       text-align: center;
+      margin-top: 1rem;
+      list-style-type: none;
       @media #{$info-phone} {
         order: 3;
         width: 50%;
       }
-      ul {
-        margin-top: 1rem;
-        list-style-type: none;
-        @media #{$info-mobile} {
-          margin-top: 0;
-        }
+      @media #{$info-mobile} {
+        margin-top: 0;
+      }
         li {
           cursor: pointer;
           margin-bottom: 18px;
@@ -106,7 +105,6 @@
         }
       }
     }
-  }
 }
 .map {
   padding: 0;

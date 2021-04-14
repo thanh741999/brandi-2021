@@ -1,8 +1,10 @@
 .features {
   @include background-gradient(#ffffff,#f4f7f9);
+  padding-top: 11.5vh;
   &__header {
     padding-bottom: 6vh;
   }
+  //===== add class from JS showSlider =======
   .show-content {
     @include flex;
     animation: fadeIn 1.3s linear ;
@@ -10,6 +12,7 @@
       display: block;
     }
   }
+  //====== End showSlider=======
   &__slider {
     @include flex;
     margin-bottom: 5vh;

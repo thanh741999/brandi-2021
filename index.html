@@ -24,14 +24,15 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+<!--=========Header===========-->
 <header class="header " id="header">
         <div class="container menu">
                 <div class="menu__logo">
-                    <h1><a href="#header"><img src="./assets/img/Brandi.svg" alt=""></a></h1>
+                    <h1><a href="#banner"><img src="./assets/img/Brandi.svg" alt=""></a></h1>
                     <span>I'am your tag line</span>
                 </div>
                 <ul class="menu__bar">
-                    <li><a href="#header" >Home</a></li>
+                    <li><a href="#banner" >Home</a></li>
                     <li><a href="#features" >Feature</a></li>
                     <li><a href="#works" >works</a></li>
                     <li><a href="#team" >Team</a></li>
@@ -44,7 +45,9 @@
                 </div>
         </div>
 </header>
+<!--=========End Header===========-->
 <main>
+    <!--=========Banner===========-->
     <section class="banner" id="banner">
         <div class="content">
             <h2 class="content__title">Meet <b>Brandi!</b></h2>
@@ -70,6 +73,8 @@
             </ul>
         </div>
     </section>
+    <!--=========End Banner===========-->
+    <!--=========Features===========-->
     <section class="features" id="features">
         <div class="container">
             <div class="features__header">
@@ -172,12 +177,14 @@
                 </div>
             </div>
             <div class="features__dot">
-                <span class="features__dot__icon" onclick="showSlide(0,'features__content','features__dot__icon')"></span>
-                <span class="features__dot__icon" onclick="showSlide(1,'features__content','features__dot__icon')"></span>
-                <span class="features__dot__icon" onclick="showSlide(2,'features__content','features__dot__icon')"></span>
+                <span class="features__dot__icon" onclick="showSlide(0,'features__slider__content','features__dot__icon')"></span>
+                <span class="features__dot__icon" onclick="showSlide(1,'features__slider__content','features__dot__icon')"></span>
+                <span class="features__dot__icon" onclick="showSlide(2,'features__slider__content','features__dot__icon')"></span>
             </div>
         </div>
     </section>
+    <!--=========End Features===========-->
+    <!--=========Works===========-->
     <section class="works" id="works">
         <div class="container">
             <div class="works__header">
@@ -210,15 +217,15 @@
         </div>
         <div class="works__pictures">
             <div class="works__pictures__item">
-                <div class=" box photography">
+                <div class="box photography">
                     <img src="./assets/img/Rectangle1.png" alt="Rectangle" class="box__img">
                     <div class="box__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(1)">
-                        <b >Labore et dolore magnam</b>
-                        <p >Photography</p>
+                        <b>Labore et dolore magnam</b>
+                        <p>Photography</p>
                     </div>
                 </div>
-                <div class=" box web">
+                <div class="box web">
                     <img src="./assets/img/Rectangle2.png" alt="Rectangle" class="box__img">
                     <div class="box__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(2)">
@@ -226,7 +233,7 @@
                         <p>Photography</p>
                     </div>
                 </div>
-                <div class=" box logo">
+                <div class="box logo">
                     <img src="./assets/img/Rectangle3.png" alt="Rectangle" class="box__img">
                     <div class="box__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(3)">
@@ -234,7 +241,7 @@
                         <p>Photography</p>
                     </div>
                 </div>
-                <div class=" box photography">
+                <div class="box photography">
                     <img src="./assets/img/Rectangle4.png" alt="Rectangle" class="box__img">
                     <div class="box__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(4)">
@@ -242,7 +249,7 @@
                         <p>Photography</p>
                     </div>
                 </div>
-                <div class=" box branding">
+                <div class="box branding">
                     <img src="./assets/img/Rectangle5.png" alt="Rectangle" class="box__img">
                     <div class="box__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(5)">
@@ -250,7 +257,7 @@
                         <p>Photography</p>
                     </div>
                 </div>
-                <div class=" box logo">
+                <div class="box logo">
                     <img src="./assets/img/Rectangle6.png" alt="Rectangle" class="box__img">
                     <div class="box__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(6)">
@@ -258,7 +265,7 @@
                         <p>Photography</p>
                     </div>
                 </div>
-                <div class=" box branding">
+                <div class="box branding">
                     <img src="./assets/img/Rectangle7.png" alt="Rectangle" class="box__img">
                     <div class="box__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(7)">
@@ -266,7 +273,7 @@
                         <p>Photography</p>
                     </div>
                 </div>
-                <div class=" box web">
+                <div class="box web">
                     <img src="./assets/img/Rectangle8.png" alt="Rectangle" class="box__img">
                     <div class="box__content">
                         <img src="./assets/img/icon-Eye.png" alt="eye" data-toggle="modal" data-target="#exampleModalCenter" onclick="wrapBox(8)">
@@ -287,6 +294,8 @@
             </div>
         </div>
     </section>
+    <!--=========End Works===========-->
+    <!--=========Team===========-->
     <section class="team" id="team">
         <div class="container">
             <div class="team__header">
@@ -308,11 +317,11 @@
                             <b>Nemo enim ipsam voluptatem quia voluptas </b>
                             <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
                         </div>
-                            <ul class="box__content__contact">
+                        <ul class="box__content__contact">
                                 <li><i class="fab fa-twitter"></i></li>
                                 <li><i class="fab fa-facebook-f"></i></li>
                                 <li><i class="fab fa-google-plus-g"></i></li>
-                            </ul>
+                        </ul>
                     </div>
                     <div class="box__info">
                         <h4>John Filmr Doe</h4>
@@ -326,11 +335,11 @@
                             <b>Nemo enim ipsam voluptatem quia voluptas </b>
                             <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
                         </div>
-                            <ul class="box__content__contact">
+                        <ul class="box__content__contact">
                                 <li><i class="fab fa-twitter"></i></li>
                                 <li><i class="fab fa-facebook-f"></i></li>
                                 <li><i class="fab fa-google-plus-g"></i></li>
-                            </ul>
+                        </ul>
                     </div>
                     <div class="box__info">
                         <h4>Chystine Hineu </h4>
@@ -520,6 +529,8 @@
             </div>
         </div>
     </section >
+    <!--=========End Team===========-->
+    <!--=========Fact===========-->
     <section class="fact">
         <div class="container">
             <div class="fact__header">
@@ -562,6 +573,8 @@
             </div>
         </div>
     </section>
+    <!--=========End Fact===========-->
+    <!--=========Discuss===========-->
     <section class="discuss" id="discuss">
         <div class="container">
             <div class="discuss__header">
@@ -596,22 +609,22 @@
                     </form>
                     <button type="submit"><img src="./assets/img/Envelope.png" alt="envelope">  Send Message</button>
                 </div>
-                <div class="discuss__content__icon">
-                    <ul>
+                <ul class="discuss__content__icon">
                         <li><img src="./assets/img/behance.png" alt="icon"></li>
                         <li><img src="./assets/img/twitter.png" alt="icon"></li>
                         <li><img src="./assets/img/dribbble.png" alt="icon"></li>
                         <li><img src="./assets/img/forrst.png" alt="icon"></li>
-                        <li><img src="./assets/img/google%20plus.png" alt="icon"></li>
-                    </ul>
-                </div>
+                        <li><img src="./assets/img/googleplus.png" alt="icon"></li>
+                </ul>
             </div>
         </div>
     </section>
     <section class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.884602263173!2d106.67937421911753!3d10.775180877156775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b3357f417%3A0x23e417f7b7cd1b1f!2sC%C3%B4ng%20ty%20gumi%20Vietnam!5e0!3m2!1svi!2s!4v1617071557622!5m2!1svi!2s" style="border:0;" width="100%" height="100%" allowfullscreen="" loading="lazy"></iframe>
     </section>
+    <!--=========End Discuss===========-->
 </main>
+<!--=========Footer===========-->
 <footer class="footer">
     <div class="container">
         <div class="footer__content">
@@ -648,14 +661,13 @@
                 </div>
             </div>
             <div class="footer__content__item">
-                <div class="item__detail">
-                    <p>Created with <img src="./assets/img/heart-empty.png" alt="heart"> by <span>Themecurve</span> exclusive for kreativeshowcase</p>
+                    <p class="item__detail">Created with <img src="./assets/img/heart-empty.png" alt="heart"> by <span>Themecurve</span> exclusive for kreativeshowcase</p>
                     <p>&copy Brandi. All Rights Reserved. </p>
-                </div>
             </div>
         </div>
     </div>
 </footer>
+<!--=========End Footer===========-->
 <button type="submit" class="move__top"><i class="fas fa-angle-double-up"></i></button>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade

@@ -2,6 +2,7 @@
 .banner {
   padding-top: 0;
   color: #FFFFFF;
+  //=======Banner Content=======
   .content {
     @include center-inside-element;
     top: 52%;
@@ -83,6 +84,7 @@
       }
     }
   }
+  //=======End Banner Content=======
   .dot {
     @include vertical-align(absolute);
     right: 3%;

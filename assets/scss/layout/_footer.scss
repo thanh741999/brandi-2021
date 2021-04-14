@@ -18,6 +18,10 @@
       @media #{$info-mobile} {
         width: 100%;
       }
+      &:last-child {
+        padding-top: 64px;
+      }
+      //======= Footer first item=====
       p {
         line-height: 25px;
         @media #{$info-mobile} {
@@ -27,6 +31,10 @@
       .logo {
         margin-bottom: 36px;
       }
+      //======= End Footer first item=====
+
+
+      //====== Footer title=======
       h4 {
         @include font-size(14px);
         margin-bottom: 43px;
@@ -34,6 +42,10 @@
         padding-top: 10px;
         opacity: .8;
       }
+      //======End Footer title=======
+
+
+      //===== footer Form=======
       .form {
         position: relative;
         margin-bottom: 25px;
@@ -53,6 +65,10 @@
           transform: translate(-50%);
         }
       }
+      //=====End footer Form=======
+
+
+      //===== footer List=======
       .list {
         overflow: auto;
         ul {
@@ -69,35 +85,37 @@
           padding-left: 35px;
         }
       }
+      //=====End footer List=======
+
+
+      //======= Footer last item=====
       .item__detail {
-        padding-top: 11vh;
+        padding-left: 12px;
         @media #{$info-mobile} {
           padding-top: 0;
         }
-        p {
-          padding-left: 12px;
-          img {
-            margin: 0 5px;
+        img {
+          margin: 0 5px;
+        }
+        span {
+          color: #062033;
+        }
+        &:first-child {
+          line-height: 20px;
+          border-left: 1px solid rgba(23,126,114,0.9);
+          margin-bottom: 60px;
+          @media #{$info-tablet-vertical} {
+            margin-bottom: 50px;
           }
-          span {
-            color: #062033;
-          }
-          &:first-child {
-            line-height: 20px;
-            border-left: 1px solid rgba(23,126,114,0.9);
-            margin-bottom: 10.5vh;
-            @media #{$info-tablet-vertical} {
-              margin-bottom: 8.5vh;
-            }
-            @media #{$info-phone} {
-              margin-bottom: 7.5vh;
-            }
-          }
-          &:last-child {
-            color: #062033;
+          @media #{$info-phone} {
+            margin-bottom: 55px;
           }
         }
+        & + p:last-child {
+          color: #062033;
+        }
       }
+      //=======End Footer last item=====
     }
   }
 }

@@ -2,6 +2,7 @@
 var slideIndex = 0
 //function
 $(document).ready(function (){
+    //======= scroll change navBar and show moveTop button========
     $(window).scroll(function (e){
         const scroll_top = document.documentElement.scrollTop;
         var slide_height = $('.slider').innerHeight();
@@ -22,6 +23,7 @@ $(document).ready(function (){
             })
         })
     })
+    //=====Works filter=====
     $('.btn-works').click(function() {
         var dataAttr = $(this).attr('data-filter');
         if (dataAttr == 'all') {
@@ -35,7 +37,7 @@ $(document).ready(function (){
     $('li').click(function() {
         $(this).addClass(' works-active').siblings().removeClass(' works-active');
     })
-    //counter--------
+    //=====counter======
     $(window).scroll(function (){
         $('.counter').each(function() {
             var $this = $(this), countTo = $this.attr('data-count');
@@ -59,7 +61,7 @@ $(document).ready(function (){
             }
         });
     })
-    //stick----------
+    //=====slick=======
     $('.team__slide').slick({
         infinite: true,
         dots: true,
@@ -106,6 +108,7 @@ $(document).ready(function (){
         ]
     });
 })
+//=======slide show========
 function showSlide(n,listSlide,dot) {
     var dots = document.getElementsByClassName(dot);
     var slides = document.getElementsByClassName(listSlide);
@@ -118,13 +121,16 @@ function showSlide(n,listSlide,dot) {
 }
 showSlide(slideIndex,'slider__img','dot__icon');
 showSlide(slideIndex,'features__slider__content','features__dot__icon');
-//toggle navbar
+//=======End Slide Show=======
+//========toggle navbar========
 function toggleMenu() {
     var menu = document.getElementsByClassName('menu__bar');
     var tabMenu = document.getElementsByClassName('burger');
     tabMenu[0].classList.toggle('change');
     menu[0].classList.toggle('show-list');
 }
+//========End toggle navbar========
+//=======Modal Image============
 function wrapBox(indexImg) {
     var wrap = document.getElementsByClassName('close-modal')[0];
     var bgImg = document.getElementsByClassName('bg--img')[0];
@@ -163,4 +169,5 @@ function wrapBox(indexImg) {
         }
     )
 }
+//=======End Modal Image============
 
