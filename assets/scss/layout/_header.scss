@@ -20,27 +20,27 @@
           content: "|";
           color: #154357;
           @include font-size(13px);
-          margin-left: 20px;
+          margin-left: 18px;
         }
       }
       span {
         color: #5d6466;
         @include font-size(13px);
-        margin-left: 10px;
+        margin-left: 12px;
         display: inline-block;
         padding: 31px 0 0;
       }
     }
 
     //====== navBar========
-    &__bar {
+    ul {
       @include flex;
       justify-content: space-between;
       align-items: center;
       list-style-type: none;
         @media #{$info-phone} {
           opacity: 0;
-          height: 100vh;
+          height: 88vh;
           width: 0;
           position: absolute;
           top: 90%;
@@ -55,31 +55,32 @@
           margin-right: 0;
         }
       li {
-        padding: 27px 0 20px;
         border-top: 1px solid transparent;
         position: relative;
         margin: 0 17px;
         @include font-size(13px);
         a {
+          padding: 27px 0 20px;
           color: #FFFFFF;
-        }
-        &:before {
-          content: "";
-          height: 1px;
-          width: 0;
-          background-color: #32b0ee;
-          display: block;
-          position: absolute;
-          top: 0;
-          @media #{$info-phone} {
-            top: unset;
-            bottom: 30%;
-            transform: translateY(-50%)
+          position: relative;
+          &:before {
+            content: "";
+            height: 1px;
+            width: 0;
+            background-color: #32b0ee;
+            display: block;
+            position: absolute;
+            top: 0;
+            @media #{$info-phone} {
+              top: unset;
+              bottom: 30%;
+              transform: translateY(-50%)
+            }
           }
-        }
-        &:hover::before {
-          width: 100%;
-          transition: 1.3s;
+          &:hover::before {
+            width: 100%;
+            transition: 1.3s;
+          }
         }
       }
     }

@@ -2,7 +2,7 @@
   position: relative;
   background: #FFFFFF;
   &__header {
-    padding: 60px 0 48px;
+    margin-bottom: 7vh;
     &__heart {
       margin-bottom: 31px;
     }
@@ -17,6 +17,7 @@
   &__list {
     list-style-type: none;
     text-align: center;
+    margin-bottom: 5.5vh;
     li {
       display: inline-block;
       &:hover {
@@ -51,15 +52,14 @@
 
   //====== Works content======
   &__pictures {
-    margin-top: 5.5vh;
-      .box {
+      .item {
         position: relative;
         width: 25%;
         @media #{$info-phone} {
           width: 50%;
         }
         //====== hover show opacity box======
-        &:hover .box__content {
+        &:hover .item__content {
           background-color: $color-main;
           top: 0;
           opacity: 1;
@@ -90,12 +90,15 @@
           }
           b {
             margin-bottom: 5px;
+            @include font-size(18px);
             @media only screen and (max-width: 475px) {
               font-size: .6rem;
 
             }
           }
           p {
+            @include font-size(14px);
+            font-weight: 400;
             @media only screen and (max-width: 475px) {
               font-size: .5rem;
             }
@@ -113,26 +116,25 @@
   }
   //======End Works content======
 
-
-  //=======Modal=======
-  .modal-dialog {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-  }
-  .modal-footer {
-    border: none;
-  }
-  .bg--img {
-    @include center-inside-element();
-    width: 400px;
-    height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  @for $i from 1 through 8 {
-    .bg--img-0#{$i} {
-      background-image: url("../img/Rectangle#{$i}.png");
-    }
+}
+//=======Modal=======
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.modal-footer {
+  border: none;
+}
+.bg--img {
+  @include center-inside-element();
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@for $i from 1 through 8 {
+  .bg--img-0#{$i} {
+    background-image: url("../img/Rectangle#{$i}.png");
   }
 }

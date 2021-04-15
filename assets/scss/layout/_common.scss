@@ -23,12 +23,14 @@ img {
   max-width: 100%;
 }
 .container {
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
   &:before , &:after {
     display: none;
   }
 }
 h3.title {
-  font-family: 'Open Sans', sans-serif;
   text-align: center;
   color: $color-main;
   @include font-size(28px);
@@ -61,14 +63,15 @@ span.heart {
 }
 p.about {
   width: 90%;
-  margin: 22px auto 0;
+  margin: 0 auto;
   text-align: center;
-  color: #384d5c;
+  color: #062033;
   @include font-size(18px);
   font-weight: 600;
+  opacity: .8;
 }
 section {
-  padding: 5vh 0;
+  padding-top: 95px;
 }
 @keyframes fadeIn {
   from {

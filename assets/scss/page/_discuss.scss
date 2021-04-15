@@ -1,13 +1,12 @@
 .discuss {
   position: relative;
   background: #FFFFFF;
-  margin-bottom: 0;
+  padding-bottom: 8.5%;
   &__header {
-    padding: 5.4% 0 6.5%;
+    margin-bottom: 6.5%;
   }
   &__content {
     @include flex;
-    margin-bottom: 6.5%;
     @media #{$info-phone} {
       flex-wrap: wrap;
     }
@@ -19,7 +18,8 @@
       }
       h3 {
         font-weight: 400;
-        margin-bottom: 2.3rem;
+        margin-bottom: 40px;
+        @include font-size(22px);
       }
       p {
         color: #6a737b;
@@ -35,8 +35,9 @@
         margin-bottom: 35px;
       }
       h3 {
+        @include font-size(24px);
         font-weight: 600;
-        margin-bottom: 27px;
+        margin-bottom: 34px;
       }
       form {
         @include flex;
@@ -63,7 +64,7 @@
           }
         }
         .message {
-          margin: 2rem 0 2.3rem;
+          margin: 38px 0 36px;
           width: 100%;
           input {
             width: 100%;

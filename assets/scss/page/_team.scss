@@ -1,12 +1,12 @@
 .team {
   background: #FFFFFF;
+  padding-bottom: 9%;
   &__header {
-    padding: 4.5vh 0 16vh;
+    margin-bottom: 11vh;
   }
   &__slide {
     @include flex;
     padding-bottom: 7%;
-    margin-bottom: 7.6%;
     @media #{$info-tablet-vertical} {
       flex-wrap: wrap;
       padding-bottom: 0;

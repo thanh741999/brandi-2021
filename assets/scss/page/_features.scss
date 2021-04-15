@@ -1,8 +1,8 @@
 .features {
   @include background-gradient(#ffffff,#f4f7f9);
-  padding-top: 11.5vh;
+  padding: 11vh 0 5vh;
   &__header {
-    padding-bottom: 6vh;
+    margin-bottom: 8.5vh;
   }
   //===== add class from JS showSlider =======
   .show-content {
@@ -15,7 +15,7 @@
   //====== End showSlider=======
   &__slider {
     @include flex;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     &__content {
       flex-wrap: wrap;
       display: none;
@@ -23,7 +23,7 @@
         width: 80%;
         margin: 0 auto;
       }
-      .item {
+      .content__item {
         width: 33.3%;
         @include flex;
         @media #{$info-phone} {
@@ -33,25 +33,16 @@
         @media #{$info-mobile} {
           margin-bottom: 25px;
         }
-        .radius {
-          @include flex;
-          align-items: center;
-          justify-content: center;
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          border: 1px solid $color-main;
-        }
-        .box__text {
+        &__text {
           width: 90%;
           padding: 0 30px 0 17px;
           @media #{$info-mobile} {
             width: 80%;
           }
           h4 {
-            font-size: 1.2rem;
+            @include font-size(20px);
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 23px;
             @media #{$info-phone} {
               margin-bottom: 10px;
             }
@@ -66,13 +57,18 @@
             }
           }
         }
+        img {
+          display: block;
+          height: 40px;
+        }
       }
     }
 
   }
+
   &__dot {
     text-align: center;
-    padding: 5vh 0 2.5vh;
+    margin-bottom: 3vh;
     &__icon {
       display: inline-block;;
       height: 8px;

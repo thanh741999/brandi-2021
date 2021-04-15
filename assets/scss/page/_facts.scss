@@ -4,6 +4,7 @@
   background-size: cover;
   position: relative;
   z-index: 2;
+  padding-bottom: 8.8%;
   //===== fact background=======
   &::before {
     position: absolute;
@@ -16,9 +17,6 @@
     z-index: -2;
   }
   //=====End fact background=======
-  &__header {
-    padding: 5.5% 0 0;
-  }
   &__content {
     @include flex;
     flex-wrap: wrap;
@@ -29,20 +27,25 @@
       width: 25%;
       @media #{$info-phone} {
         width: 50%;
+        margin-bottom: 30px;
       }
       @media #{$info-mobile} {
         width: 100%;
       }
+      .item__img {
+        margin-bottom: 6vh;
+        @media #{$info-phone} {
+          margin-bottom: 1vh;
+        }
+      }
       .item__info {
-        margin: 2.5rem 0 5rem;
         h3 {
-          font-size: 2.5rem;
+          @include font-size(60px);
           font-weight: 600;
-          margin: 10px 0 0;
         }
         p {
           text-transform: uppercase;
-          font-size: 1.2rem;
+          @include font-size(18px);
         }
       }
     }
